@@ -1,0 +1,7 @@
+#!/usr/bin/python3
+
+def uppercase(string):
+    new_string = ""
+    for i in range(len(string)):
+        if ord(string[i]) > 96 and ord(string[i]) < 123:
+            new_string[i] = chr(ord(string[i]) - 32)
