@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 def print_matrix_integer(matrix=[[]]):
-    if not matrix:
-        print()
+    if matrix == [[]]:
+        print("")
     else:
         for i in matrix:
             length = len(i)
