@@ -10,6 +10,6 @@ def add_tuple(tuple_a=(), tuple_b=()):
         if i >= 2:
             pass
         else:
-            nums[i] += v 
+            nums[i] += v
     tup = tuple(nums)
     return tup
