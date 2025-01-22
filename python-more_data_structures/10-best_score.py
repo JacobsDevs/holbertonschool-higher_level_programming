@@ -3,4 +3,4 @@
 def best_score(a_dictionary):
     if a_dictionary == None:
         return None
-    return list(dict(sorted(a_dictionary.items())).keys())[-1]
+    return max(a_dictionary, key = a_dictionary.get)
