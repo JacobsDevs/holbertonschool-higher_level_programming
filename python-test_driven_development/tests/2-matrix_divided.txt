@@ -11,6 +11,24 @@ Test basic input:
   >>> matrix_divided([[1, 2, 3], [4, 5, 6]], 3)
   [[0.33, 0.67, 1.0], [1.33, 1.67, 2.0]]
 
+Test missing matrix:
+  >>> matrix_divided(, 3)
+  Traceback (most recent call last):
+  ...
+  SyntaxError: invalid syntax
+
+Test missing div:
+  >>> matrix_divided([[1, 2, 3], [4, 5, 6]])
+  Traceback (most recent call last):
+  ...
+  TypeError: matrix_divided() missing 1 required positional argument: 'div'
+
+Test missing all arguments:
+  >>> matrix_divided()
+  Traceback (most recent call last):
+  ...
+  TypeError: matrix_divided() missing 2 required positional arguments: 'matrix' and 'div'
+
 Test list not a matrix:
   >>> matrix_divided([1, 2, 3], 5)
   Traceback (most recent call last):
@@ -40,3 +58,7 @@ Test each list in matrix is same size:
   Traceback (most recent call last):
   ...
   TypeError: div must be a number
+
+Test dividing by infinity:
+  >>> matrix_divided([[1, 2, 3], [4, 5, 6]], float('inf'))
+  [[0.0, 0.0, 0.0], [0.0, 0.0, 0.0]]
