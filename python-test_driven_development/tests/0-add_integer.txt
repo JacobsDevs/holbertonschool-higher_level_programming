@@ -46,3 +46,12 @@ Test with b as a string:
 Test with floats:
   >>> add_integer(2.1, 3.6)
   5
+
+Test with NaN:
+  >>> add_integer(float("nan"), 10)
+
+Test with Float Overflow:
+  >>> add_integer(float(10**1000), 1)
+  Traceback (most recent call last):
+  ...
+  OverflowError: int too large to convert to float
