@@ -14,7 +14,7 @@ def matrix_divided(matrix, div):
     correct_length = True
     div_is_number = True
     try:
-        new_matrix = matrix.copy()
+        new_matrix = list(matrix)
         if not isinstance(div, (int, float)):
             div_is_number = False
             raise TypeError
