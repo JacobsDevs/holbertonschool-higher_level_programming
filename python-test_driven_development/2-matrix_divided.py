@@ -14,16 +14,17 @@ def matrix_divided(matrix, div):
     correct_length = True
     div_is_number = True
     try:
+        new_matrix = matrix.copy()
         if not isinstance(div, (int, float)):
             div_is_number = False
             raise TypeError
         for c, v in enumerate(matrix):
             for d, j in enumerate(v):
-                matrix[c][d] = round(j / div, 2)
+                new_matrix[c][d] = round(j / div, 2)
         if len(set(map(lambda x: len(x), matrix))) > 1:
             correct_length = False
             raise TypeError
-        return matrix
+        return new_matrix
 
     except TypeError:
         if not correct_length:
