@@ -5,6 +5,6 @@ Module for the Square class.
 
 class Square():
     """
-    An empty cxlass defining Square
+    An empty class defining Square
     """
     pass
