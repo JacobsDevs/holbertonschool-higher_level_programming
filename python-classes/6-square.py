@@ -21,7 +21,8 @@ class Square():
         else:
             raise TypeError("size must be an integer")
         if isinstance(position, tuple):
-            if (not isinstance(position[0], int) or
+            if (len(position) != 2 or 
+                    not isinstance(position[0], int) or
                     not isinstance(position[1], int) or
                     position[0] < 0 or
                     position[1] < 0):
