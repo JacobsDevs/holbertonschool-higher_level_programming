@@ -21,7 +21,7 @@ class Square():
         else:
             raise TypeError("size must be an integer")
         if isinstance(position, tuple):
-            if (len(position) != 2 or 
+            if (len(position) != 2 or
                     not isinstance(position[0], int) or
                     not isinstance(position[1], int) or
                     position[0] < 0 or
@@ -70,10 +70,10 @@ class Square():
         return self.__size * self.__size
 
     def my_print(self):
-        if self.position[1] > 0:
-            for i in range(self.position[1]):
-                print("")
         if self.size > 0:
+            if self.position[1] > 0:
+                for i in range(self.position[1]):
+                    print("")
             for i in range(self.size):
                 if self.position[0] > 0:
                     for i in range(self.position[0]):
