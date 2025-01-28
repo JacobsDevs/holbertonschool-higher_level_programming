@@ -81,3 +81,6 @@ class Square():
                 print("")
         else:
             print("")
+
+    def area(self):
+        return self.__size * self.__size
