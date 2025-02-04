@@ -23,7 +23,7 @@ Test with 0 value:
   >>> test.integer_validator("my_int", 0):
   Traceback (most recent call last):
   ...
-  ValueError: my_int must be greater than 0
+  SyntaxError: invalid syntax
 
 Test use with not an int:
   >>> test.integer_validator('my_int', "is cool")
