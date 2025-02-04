@@ -33,3 +33,11 @@ Test print_sorted on negative integers:
   >>> new_list.append(-4)
   >>> new_list.print_sorted()
   [-4, -2]
+
+Test list isn't changed:
+  >>> print(my_list)
+  [1, 3, 2]
+  >>> my_list.print_sorted()
+  [1, 2, 3]
+  >>> print(my_list)
+  [1, 3, 2]
