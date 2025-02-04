@@ -48,7 +48,7 @@ Test with no input:
   >>> test.integer_validator()
   Traceback (most recent call last):
   ...
-  TypeError: integer_validator() missing 2 required positional arguments: 'name' and 'value'
+  TypeError: BaseGeometry.integer_validator() missing 2 required positional arguments: 'name' and 'value'
 
 Test area():
   >>> test.area()
