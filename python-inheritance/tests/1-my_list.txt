@@ -27,3 +27,9 @@ Test print_sorted empty list:
   >>> new_list = myList()
   >>> new_list.print_sorted()
   []
+
+Test print_sorted on negative integers:
+  >>> new_list.append(-2)
+  >>> new_list.append(-4)
+  >>> new_list.print_sorted()
+  [-4, -2]
