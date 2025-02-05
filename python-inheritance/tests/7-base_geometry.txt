@@ -19,12 +19,6 @@ Test use with negative int:
   ...
   ValueError: my_int must be greater than 0
 
-Test with 0 value:
-  >>> test.integer_validator("my_int", 0):
-  Traceback (most recent call last):
-  ...
-  SyntaxError: invalid syntax
-
 Test use with not an int:
   >>> test.integer_validator('my_int', "is cool")
   Traceback (most recent call last):
@@ -48,6 +42,12 @@ Test with no input:
   Traceback (most recent call last):
   ...
   TypeError: integer_validator() missing 2 required positional arguments: 'name' and 'value'
+
+Test with 0 value:
+  >>> test.integer_validator("my_int", 0):
+  Traceback (most recent call last):
+  ...
+  SyntaxError: invalid syntax
 
 Test area():
   >>> test.area()
