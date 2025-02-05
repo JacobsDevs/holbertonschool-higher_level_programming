@@ -44,7 +44,7 @@ Test with no input:
   TypeError: integer_validator() missing 2 required positional arguments: 'name' and 'value'
 
 Test with 0 value:
-  >>> test.integer_validator("my_int", 0):
+  >>> test.integer_validator("age", 0):
   Traceback (most recent call last):
   ...
   SyntaxError: invalid syntax
