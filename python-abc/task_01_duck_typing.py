@@ -31,7 +31,10 @@ class Circle(Shape):
     """
 
     def __init__(self, radius):
-        self.__radius = radius
+        if radius > 0:
+            self.__radius = radius
+        else:
+            raise ValueError("Circle Radius must not be negative")
 
     def area(self):
         return pi * (self.__radius ** 2)
