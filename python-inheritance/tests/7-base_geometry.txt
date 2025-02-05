@@ -47,7 +47,7 @@ Test with 0 value:
   >>> test.integer_validator("age", 0)
   Traceback (most recent call last):
   ...
-  SyntaxError: invalid syntax
+  SyntaxError: age must be greater than 0
 
 Test area():
   >>> test.area()
