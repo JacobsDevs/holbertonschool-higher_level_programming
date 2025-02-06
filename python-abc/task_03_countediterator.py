@@ -8,7 +8,7 @@ class CountedIterator():
     Counted Iterator class
     """
 
-    def __init__(self, data):
+    def __init__(self, data=[]):
         self.iterator = iter(data)
         self.counter = 0
 
@@ -16,8 +16,9 @@ class CountedIterator():
         return self.counter
 
     def __next__(self):
-        self.counter += 1
         try:
-            next(self.iterator)
+            val = next(self.iterator)
+            self.counter += 1
+            return val
         except Exception:
             raise StopIteration("No more items")
