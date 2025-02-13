@@ -17,3 +17,7 @@ class TestClass(unittest.TestCase):
     def test_deserialize_nonexistant_file(self):
         b = CustomObject.deserialize("no_file.txt")
         self.assertEqual(b, None)
+
+    def test_zcorrupt_file(self):
+        b = CustomObject.deserialize("corrupt_file.txt")
+        self.assertEqual(b, None)

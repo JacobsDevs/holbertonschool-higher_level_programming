@@ -27,3 +27,5 @@ class CustomObject:
                 return pickle.load(f)
         except FileNotFoundError:
             return None
+        except pickle.UnpicklingError:
+            return None
