@@ -29,3 +29,5 @@ class CustomObject:
             return None
         except pickle.UnpicklingError:
             return None
+        except EOFError:
+            return None
