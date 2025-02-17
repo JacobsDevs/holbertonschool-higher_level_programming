@@ -29,8 +29,12 @@ def fetch_and_save_posts():
     posts = requests.get('https://jsonplaceholder.typicode.com/posts')
     if posts.status_code == 200:
         formatted_posts = posts.json()
+        for i in formatted_posts:
+            del(i['userId'])
         with open('posts.csv', 'w', encoding="utf-8") as my_csv:
-            csv_file = csv.DictWriter(my_csv, formatted_posts[0].keys())
+            csv_file = csv.DictWriter(my_csv, ['id', 'title', 'body'])
             csv_file.writeheader()
             for i in formatted_posts:
                 csv_file.writerow(i)
+
+fetch_and_save_posts()
