@@ -38,3 +38,5 @@ def start_server():
     with socketserver.TCPServer(('', PORT), MyWebServer) as httpd:
         print('Now serving on PORT ', PORT)
         httpd.serve_forever()
+
+start_server()
