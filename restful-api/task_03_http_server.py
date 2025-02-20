@@ -29,8 +29,6 @@ class MyWebServer(http.server.BaseHTTPRequestHandler):
         else:
             self.send_response(404)
             self.end_headers()
-            string = '{} Page Not Found'.format(self.path)
-            self.wfile.write(string.encode())
 
 def start_server():
     socketserver.TCPServer.allow_reuse_address = True
