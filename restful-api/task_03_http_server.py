@@ -27,7 +27,7 @@ class MyWebServer(http.server.BaseHTTPRequestHandler):
             self.wfile.write(b'OK')
 
         else:
-            self.send_response(404)
+            self.send_response(404, message="404 Not Found")
             self.end_headers()
 
 def start_server():
