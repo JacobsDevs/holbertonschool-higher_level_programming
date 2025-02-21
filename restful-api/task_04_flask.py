@@ -22,7 +22,7 @@ def user(username):
     if username in users.keys():
         return jsonify(users[username])
     else:
-        return {"error": "User not found"}
+        return {"error": "User not found"}, 400
 
 @app.route("/add_user", methods=['POST'])
 def add_user():
