@@ -28,6 +28,8 @@ class MyWebServer(http.server.BaseHTTPRequestHandler):
             self.wfile.write('OK'.encode())
         else:
             self.send_error(404)
+            self.end_headers()
+            self.wfile.write('Endpoint not found'.encode())
 
 def start_server():
     socketserver.TCPServer.allow_reuse_address = True
