@@ -27,7 +27,7 @@ class MyWebServer(http.server.BaseHTTPRequestHandler):
             self.end_headers()
             self.wfile.write('OK'.encode())
         else:
-            self.send_error(404)
+            self.send_response(404)
             self.end_headers()
             self.wfile.write('Endpoint not found'.encode())
 
