@@ -7,12 +7,13 @@ import http.server, socketserver, json
 
 PORT = 8000
 class MyWebServer(http.server.BaseHTTPRequestHandler):
+
     def do_GET(self):
         if self.path == '/':
             self.send_response(200)
             self.end_headers()
-            string = 'Hello, this is a simple API!'.encode()
-            self.wfile.write(string)
+            string = 'Hello, this is a simple API!'
+            self.wfile.write(string.encode())
 
         elif self.path == '/data':
             self.send_response(200)
@@ -24,9 +25,9 @@ class MyWebServer(http.server.BaseHTTPRequestHandler):
         elif self.path == '/status':
             self.send_response(200)
             self.end_headers()
-            self.wfile.write(b'OK')
+            self.wfile.write('OK'.encode())
         else:
-            self.send_error(404, message="Endpoint not found")
+            self.send_error(404)
 
 def start_server():
     socketserver.TCPServer.allow_reuse_address = True
