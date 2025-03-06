@@ -1,3 +1,4 @@
+-- Get All Titles and their Genres including shows with no genre
 SELECT s.title, g.name
 FROM tv_shows AS s
 LEFT JOIN tv_show_genres AS j
