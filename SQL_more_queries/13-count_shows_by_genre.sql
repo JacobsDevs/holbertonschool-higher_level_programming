@@ -6,4 +6,5 @@ ON g.id = j.genre_id
 LEFT JOIN tv_shows AS s
 ON s.id = j.show_id
 GROUP BY g.name
+HAVING COUNT(s.title) > 0
 ORDER BY number_of_shows DESC;
