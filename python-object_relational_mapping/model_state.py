@@ -1,9 +1,9 @@
 #!/usr/bin/python3
+"""Module containing the State Class and information for database entries"""
 from sqlalchemy.orm import declarative_base
 from sqlalchemy import Nullable, create_engine, Column, Integer, String, Null
 
 
-"""Module containing the State Class and information for database entries"""
 Base = declarative_base()
 
 class State(Base):
