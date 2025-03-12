@@ -1,0 +1,5 @@
+[tools]
+python = "3.13"
+
+[env]
+PYTHONPATH = "/usr/bin/python3"
