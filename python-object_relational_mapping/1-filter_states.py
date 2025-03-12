@@ -12,7 +12,7 @@ def print_all_rows():
                          db=sys.argv[3])
 
     cur = db.cursor()
-    cur.execute("SELECT * FROM states WHERE name LIKE 'N%' ORDER BY id")
+    cur.execute("SELECT * FROM states WHERE UPPER(name) LIKE 'N%' ORDER BY id")
     rows = cur.fetchall()
     for r in rows:
         print(r)
