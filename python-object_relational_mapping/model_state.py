@@ -3,8 +3,8 @@
 from sqlalchemy.orm import declarative_base
 from sqlalchemy import Nullable, create_engine, Column, Integer, String, Null
 
-
 Base = declarative_base()
+
 
 class State(Base):
     """State Class
@@ -23,4 +23,3 @@ class State(Base):
                 unique=True,
                 primary_key=True)
     name = Column(String(128), nullable=False)
-
