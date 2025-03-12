@@ -1,4 +1,4 @@
-#!/home/jacob/.local/share/mise/installs/python/3.13.1/bin/python3
+#!/usr/bin/python3
 from sqlalchemy.orm import declarative_base
 from sqlalchemy import Nullable, create_engine, Column, Integer, String, Null
 
