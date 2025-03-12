@@ -1,8 +1,12 @@
 #!/usr/bin/python3
+"""Prints all rows in a database"""
 import sys
 import MySQLdb
 
+
+
 def print_all_rows():
+    """This is the function that does it"""
     db = MySQLdb.connect(host='localhost:3306', user=sys.argv[1], passwd=sys.argv[2], db=sys.argv[3])
 
     cur = db.cursor()
@@ -11,8 +15,6 @@ def print_all_rows():
     for r in rows:
         print(r)
 
-def __doc__():
-    """Prints a list of the states in the database"""
 
 if __name__ == "__main__":
     print_all_rows()
