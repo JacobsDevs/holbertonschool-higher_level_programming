@@ -1,4 +1,3 @@
-#!/home/jacob/.local/share/mise/installs/python/3.13.1/bin/python
 #!/usr/bin/python3
 """Lists the first state in the database using sqlalchemy"""
 import sys
