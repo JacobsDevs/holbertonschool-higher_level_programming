@@ -16,4 +16,4 @@ if __name__ == "__main__":
     with engine.connect() as conn:
         result = conn.execute(query)
         conn.commit()
-        print(result.inserted_primary_key)
+        print(result.inserted_primary_key[0])
