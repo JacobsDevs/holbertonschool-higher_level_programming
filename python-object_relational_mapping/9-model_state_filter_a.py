@@ -11,6 +11,6 @@ if __name__ == "__main__":
                            format(sys.argv[1], sys.argv[2], sys.argv[3]))
     session = Session(engine)
 
-    query = select(State).filter_by(name="%a%")
+    query = select(State).filter(State.name.like("%a%"))
     for state in session.scalars(query):
         print("{}: {}".format(state.id, state.name))
