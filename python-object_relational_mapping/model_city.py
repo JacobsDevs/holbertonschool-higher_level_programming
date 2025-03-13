@@ -1,7 +1,9 @@
 #!/usr/bin/python3
 """Module containing the State Class and information for database entries"""
-from sqlalchemy.orm import declarative_base, relationship, Mapped, mapped_column
-from sqlalchemy import Nullable, create_engine, Column, Integer, String, Null, ForeignKey
+from sqlalchemy.orm import declarative_base, relationship
+from sqlalchemy.orm import Mapped, mapped_column
+from sqlalchemy import Nullable, create_engine, Column, Integer, String, Null
+from sqlalchemy import ForeignKey
 
 Base = declarative_base()
 
