@@ -1,9 +1,8 @@
 #!/usr/bin/python3
 """Module containing the State Class and information for database entries"""
-from sqlalchemy.orm import declarative_base
+from sqlalchemy.orm import relationship, declarative_base, mapped_column, Mapped
 from sqlalchemy import Nullable, create_engine, Column, Integer, String, Null
-
-Base = declarative_base()
+from model_city import Base
 
 
 class State(Base):
@@ -23,3 +22,4 @@ class State(Base):
                 unique=True,
                 primary_key=True)
     name = Column(String(128), nullable=False)
+    cities: Mapped[list["City"]] = relationship()
