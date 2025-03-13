@@ -10,7 +10,9 @@ if __name__ == "__main__":
                            format(sys.argv[1], sys.argv[2], sys.argv[3]))
     session = Session(engine)
 
-    stmt = select(State).limit(1)
+    state = session.scalars(select(State)).first()
 
-    for state in session.scalars(stmt):
+    if state == None:
+        print("Nothing")
+    else:
         print("{}: {}".format(state.id, state.name))
