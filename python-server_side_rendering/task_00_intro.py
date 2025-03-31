@@ -20,12 +20,12 @@ def generate_invitations(template, invitees):
         if not exists("output_{}.txt".format(i + 1)):
             with open("output_{}.txt".format(i + 1), "w") as invite:
                 message = ""
-                if "name" in x.keys:
+                if "name" in x.keys():
                     message = template.replace("{name}", x["name"] or "N/A")
-                if "event_title" in x.keys:
+                if "event_title" in x.keys():
                     message = message.replace("{event_title}", x["event_title"] or "N/A")
-                if "event_date" in x.keys:
+                if "event_date" in x.keys():
                     message = message.replace("{event_date}", x["event_date"] or "N/A")
-                if "event_location" in x.keys:
+                if "event_location" in x.keys():
                     message = message.replace("{event_location}", x["event_location"] or "N/A")
                 invite.write(message)
