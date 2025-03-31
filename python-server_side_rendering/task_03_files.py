@@ -29,7 +29,7 @@ def products():
     elif args['source'] == 'csv':
         data = open_csv()
     else:
-        data = ['Wrong Source']
+        data = ['Wrong source']
     if 'id' in args.keys():
         for ind, x in enumerate(data):
             print("ID")
