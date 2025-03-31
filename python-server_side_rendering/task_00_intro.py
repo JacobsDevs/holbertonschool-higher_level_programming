@@ -21,11 +21,19 @@ def generate_invitations(template, invitees):
             with open("output_{}.txt".format(i + 1), "w") as invite:
                 message = ""
                 if "name" in x.keys():
-                    message = template.replace("{name}", x["name"] or "N/A")
+                    message = template.replace("{name}", x["name"])
+                else:
+                    message = template.replace("{name}", "N/A")
                 if "event_title" in x.keys():
-                    message = message.replace("{event_title}", x["event_title"] or "N/A")
+                    message = message.replace("{event_title}", x["event_title"])
+                else:
+                    message = template.replace("{event_title}", "N/A")
                 if "event_date" in x.keys():
-                    message = message.replace("{event_date}", x["event_date"] or "N/A")
+                    message = message.replace("{event_date}", x["event_date"])
+                else:
+                    message = template.replace("{event_date}", "N/A")
                 if "event_location" in x.keys():
-                    message = message.replace("{event_location}", x["event_location"] or "N/A")
+                    message = message.replace("{event_location}", x["event_location"])
+                else:
+                    message = template.replace("{event_location}", "N/A")
                 invite.write(message)
