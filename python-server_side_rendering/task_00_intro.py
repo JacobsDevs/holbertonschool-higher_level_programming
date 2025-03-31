@@ -10,7 +10,7 @@ def generate_invitations(template, invitees):
         print("Template is not a string")
         return
     if isinstance(invitees, list):
-        if len(invitees) <= 0 or isinstance(invitees[0], dict):
+        if len(invitees) <= 0 or not isinstance(invitees[0], dict):
             print("No data provided, no output files generated.")
             return
     else:
