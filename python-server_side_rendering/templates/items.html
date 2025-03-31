@@ -12,7 +12,7 @@
   <p>No items found</p>
   {% else %}
   <ul>
-    {% for i in items %}
+    {% for i in items["items"] %}
     <li>{{ i }}</li>
     {% endfor %}
   </ul>
