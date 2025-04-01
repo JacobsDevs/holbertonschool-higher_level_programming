@@ -29,7 +29,7 @@ def products():
         data = json.load(open('./products.json'))
     elif args['source'] == 'csv':
         data = open_csv()
-    elif args['source'] == 'db':
+    elif args['source'] == 'sql':
         data = read_db()
     else:
         data = ['Wrong source']
